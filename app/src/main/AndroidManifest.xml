@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FlipGame">
+
+        <!-- 主界面：菜单 + 关于对话框 + 进入游戏 -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            游戏界面（Controller）。
+            注意这里故意不写 android:configChanges：
+            横竖屏切换时让 Activity 正常重建，onCreate 里再按屏幕方向设置不同的列数，
+            并用 onSaveInstanceState 恢复牌面状态，从而做到“横屏竖屏不同牌数布局”。
+        -->
+        <activity
+            android:name=".GameActivity"
+            android:exported="false"
+            android:label="@string/title_game"
+            android:parentActivityName=".MainActivity" />
+
+    </application>
+
+</manifest>

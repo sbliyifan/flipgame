@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- APP 标题 = 姓名 + 学号（按提交要求） -->
+    <string name="app_name">李易凡2024110517</string>
+    <string name="title_game">翻牌游戏</string>
+
+    <!-- 主界面 -->
+    <string name="main_title">RecyclerView 翻牌游戏</string>
+    <string name="main_subtitle">24 张牌 · GridLayoutManager 网格排布</string>
+    <string name="btn_mode_two">2 张牌玩法（12 对）</string>
+    <string name="btn_mode_three">3 张牌玩法（8 组）</string>
+
+    <!-- 游戏界面 -->
+    <string name="score_format">得分：%1$d</string>
+    <string name="score_default">得分：0</string>
+    <string name="flip_format">翻牌：%1$d 次</string>
+    <string name="flip_default">翻牌：0 次</string>
+    <string name="card_back_symbol">?</string>
+
+    <!-- 菜单与对话框 -->
+    <string name="menu_about">关于</string>
+    <string name="menu_restart">重新开始</string>
+    <string name="about_title">关于本程序</string>
+    <string name="about_message">RecyclerView 翻牌游戏\n\n姓名：李易凡\n学号：2024110517\n\n【玩法】\n2 张玩法：翻开两张花色相同的牌即配对成功；\n3 张玩法：需要翻开三张花色相同的牌才算成功。\n配对成功加分，配错扣分，全部配对完成即通关。\n\n【结构】采用 MVC\nModel：Card、CardMatchingGame\nView：RecyclerView + item_card.xml\nAdapter：CardAdapter\nController：MainActivity、GameActivity</string>
+    <string name="ok">确定</string>
+    <string name="action_restart">重新开始</string>
+    <string name="game_over_title">恭喜通关</string>
+    <string name="game_over_message">全部配对完成！\n最终得分：%1$d\n翻牌次数：%2$d</string>
+
+    <!--
+        牌面花色。
+        2 张玩法共 12 组（24/2），3 张玩法共 8 组（24/3），
+        所以至少要准备 12 种不同符号，否则不同组会出现相同花色导致误判。
+    -->
+    <string-array name="card_symbols">
+        <item>♠</item>
+        <item>♥</item>
+        <item>♦</item>
+        <item>♣</item>
+        <item>★</item>
+        <item>●</item>
+        <item>▲</item>
+        <item>■</item>
+        <item>◆</item>
+        <item>○</item>
+        <item>□</item>
+        <item>△</item>
+    </string-array>
+
+</resources>

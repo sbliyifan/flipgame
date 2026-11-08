@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        注意 parent 用的是 .Bridge 版本：
+        Android Studio 较新版本默认主题是 Material3，直接给按钮设置 android:background
+        会不生效（背景被主题自带的样式盖住）。改成 Bridge 主题即可正常显示自定义背景，
+        这是指导书里特别提醒的一点。
+    -->
+    <style name="Theme.FlipGame" parent="Theme.MaterialComponents.DayNight.DarkActionBar.Bridge">
+        <item name="colorPrimary">@color/brand</item>
+        <item name="colorPrimaryVariant">@color/brand_dark</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+    </style>
+
+</resources>
